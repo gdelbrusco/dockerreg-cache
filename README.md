@@ -1,5 +1,7 @@
 # dockerreg-cache
-Docker registry as cache registry for kubernetes
+Docker registry as cache registry for kubernetes for dockerhub 
+
+This is can be useful if you are hitting a limits on pull request 
 
 Important for install must define a pv with name docker-repo-pv and one pvc with name docker-repo-pvc, no one yml is defined to leave this step free for your configuration
 
@@ -11,6 +13,11 @@ inside configmap.yml you can modify the folder for docker registry
 ```yaml
 filesystem:
         rootdirectory: /var/lib/registry ---> you can modify this with your best config, this is the folder location inside the container
+
+
+
+proxy:
+      remoteurl: https://registry-1.docker.io ---> you can modify the docker registry (now is a proxy for dockerhub)
 ```
 
 
