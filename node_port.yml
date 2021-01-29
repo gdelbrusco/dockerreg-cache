@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: dockerregnodeport
+  labels:
+    name: dockerreg
+spec:
+  type: NodePort
+  ports:
+    - port: 5000
+      nodePort: 33036
+      name: http
+  selector:
+    app: docker-registry-pod
