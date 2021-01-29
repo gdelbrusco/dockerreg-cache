@@ -12,3 +12,24 @@ inside configmap.yml you can modify the folder for docker registry
 filesystem:
         rootdirectory: /var/lib/registry ---> you can modify this with your best config, this is the folder location inside the container
 ```
+
+
+## Use the docker cache 
+After deploy of the statefulsets you can config the docker on all worker machine and master that point to the localhost:33036 
+The good config is to use hostname instead the localhost
+
+This is an example of daemon.json config under /etc/docker
+
+```
+{
+        "registry-mirrors": ["http://localhost:33036"]
+}
+
+suggest config
+
+{
+        "registry-mirrors": ["http://node_hostname:33036"]
+}
+
+
+```
