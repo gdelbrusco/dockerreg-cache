@@ -7,5 +7,8 @@ Important for install must define a pv with name docker-repo-pv and one pvc with
 
 * The important config
 inside configmap.yml you can modify the folder for docker registry 
+
+"
 filesystem:
         rootdirectory: /var/lib/registry ---> you can modify this with your best config
+"
