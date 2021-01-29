@@ -8,7 +8,7 @@ Important for install must define a pv with name docker-repo-pv and one pvc with
 ## This deploy is a statefulsets and use a configmap for the configuration 
 
 * The important config
-inside configmap.yml you can modify the folder for docker registry 
+inside configmap.yml you can modify the folder for docker registry or the docker registry that you want to cache
 
 ```yaml
 filesystem:
