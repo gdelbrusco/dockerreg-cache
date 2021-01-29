@@ -15,7 +15,9 @@ filesystem:
 
 
 ## Use the docker cache 
-After deploy of the statefulsets you can config the docker on all worker machine and master that point to the localhost:33036 
+After deploy of the statefulsets you can config the docker on all worker machine and master that point to the localhost:33036
+
+
 The good config is to use hostname instead the localhost
 
 This is an example of daemon.json config under /etc/docker
@@ -25,7 +27,7 @@ This is an example of daemon.json config under /etc/docker
         "registry-mirrors": ["http://localhost:33036"]
 }
 
-suggest config
+suggested config
 
 {
         "registry-mirrors": ["http://node_hostname:33036"]
