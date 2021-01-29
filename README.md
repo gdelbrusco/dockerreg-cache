@@ -10,5 +10,5 @@ inside configmap.yml you can modify the folder for docker registry
 
 ```yaml
 filesystem:
-        rootdirectory: /var/lib/registry ---> you can modify this with your best config this is the folder location inside the container
+        rootdirectory: /var/lib/registry ---> you can modify this with your best config, this is the folder location inside the container
 ```
