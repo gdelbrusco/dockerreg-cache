@@ -5,7 +5,13 @@ This is can be useful if you are hitting a limits on pull request
 
 Important for install must define a pv with name docker-repo-pv and one pvc with name docker-repo-pvc, no one yml is defined to leave this step free for your configuration
 
-## This deploy is a statefulsets and use a configmap for the configuration 
+---
+### Note
+I've added the docker_cache_deployment_apps if you want to use docker cache as a normal deploy, this can be useful if you have a big enviroment, ofcourse you must use a pvc readwrite many as default (for this container) so de deploy is more faster than only one container.
+
+---
+
+## This deploy is a statefulsets or deployment apps and use a configmap for the configuration 
 
 * The important config
 inside configmap.yml you can modify the folder for docker registry or the docker registry that you want to cache
